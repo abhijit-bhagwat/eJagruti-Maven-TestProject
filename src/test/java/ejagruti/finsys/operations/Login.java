@@ -74,6 +74,14 @@ public class Login
 		loginerror.getText().equalsIgnoreCase(ab);
 	}
 	
+	@Then("^user redirected to homepage where message starting with \"(.*)\" is displayed on the top$")
+	public boolean validatehomepage() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		WebElement chk=AppLaunch.driver.findElement(By.xpath("//span[.='Welcome dummy[FM]']"));
+		return chk.isDisplayed();
+	}
+
 
 
 	

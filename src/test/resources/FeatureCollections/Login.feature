@@ -30,7 +30,14 @@ Feature: Login feature
     When user enters "dummyfm%$#" as username
     And user enters "Password@#!" as password
     And user clicks on login button
-    Then error message "Please Enter Valid Username or Password!!!" displayes at the bottom
+    Then error message "Please Enter Valid Username or Password!!!" displays at the bottom
 
+  @LoginWithValidCredentials
+  Scenario: Login Functionality for valid username and valid password
+    Given User is on the application login page
+    When user enters "dummyfm" as username
+    And user enters "passw0rd" as password
+    And user clicks on login button
+    Then user redirected to homepage where message starting with "Welcome dummy[FM]" is displayed on the top
 
     
