@@ -17,11 +17,11 @@ public class CreateCompany
 //	}
 	
 	@FindBy(how=How.XPATH,using="//*[.='Financial Analysis']")
-	WebElement financialanalysis;
+	WebElement financialanalysis1;
 	public void ClickFinancialAnalysis() throws InterruptedException
 	{
 			Thread.sleep(4000);
-			financialanalysis.click();
+			financialanalysis1.click();
 	}
 
 }
